@@ -13,7 +13,7 @@ opentime = input("请输入开盘时间(2023-02-14 20:00:00): ")
 buy_price = float(input("请输入买入价格: "))
 buy_amount = float(input("请输入买入数量: "))
 
-print("OKEX 抢开盘...")
+print("\nOKEX 抢开盘...")
 print("买入:", coin)
 print("价格:", buy_price)
 print("数量:", buy_amount)
