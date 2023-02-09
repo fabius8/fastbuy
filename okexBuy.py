@@ -6,7 +6,7 @@ import time
 from datetime import datetime, timedelta
 
 print("isolated: 逐仓\ncross: 全仓非保证金模式\ncash: 非保证金模式\n")
-tdmode = input("请输入账户交易模式: ")
+tdMode = input("请输入账户交易模式: ")
 
 coin = input("请输入交易币种(如 BLUR ): ")
 opentime = input("请输入开盘时间(2023-02-14 20:00:00): ")
