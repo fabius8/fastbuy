@@ -37,8 +37,8 @@ def exchangeTrade(coin, exchange, buy_price, buy_amount):
         "px": buy_price,
         "sz": buy_amount
     }
-    exchange["spot"].private_post_trade_order(request)
-    return request
+    res = exchange["spot"].private_post_trade_order(request)
+    return res
 
 
 if __name__ == '__main__':
