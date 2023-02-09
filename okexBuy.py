@@ -20,15 +20,14 @@ print("数量:", buy_amount)
 print("交易金额(USDT):", buy_price*buy_amount)
 
 config = json.load(open('config.json'))
-okex = {}
+exchange = {}
 
 def exchangeInit(config):
-    global okex
-    okex["spot"] = ccxt.okx(config["okex"])
-    okex["spot"].load_markets()
+    global exchange
+    exchange["spot"] = ccxt.okx(config["okex"])
+    exchange["spot"].load_markets()
 
-def exchangeTrade(coin, okex, buy_price, buy_amount):
-    #okex["spot"].load_markets()
+def exchangeTrade(coin, exchange, buy_price, buy_amount):
     pair = coin + "-USDT"
     request = {
         "instId": pair,
@@ -38,7 +37,7 @@ def exchangeTrade(coin, okex, buy_price, buy_amount):
         "px": buy_price,
         "sz": buy_amount
     }
-    okex["spot"].private_post_trade_order(request)
+    exchange["spot"].private_post_trade_order(request)
     return request
 
 
@@ -49,7 +48,7 @@ if __name__ == '__main__':
         timeA = datetime.now()
         if timeA > timeB:
             try:
-                res = exchangeTrade(coin, okex, buy_price, buy_amount)
+                res = exchangeTrade(coin, exchange, buy_price, buy_amount)
                 print("交易完成!", res)
             except Exception as e:
                 print("抢购失败!", type(e).__name__, str(e))
