@@ -1,0 +1,21 @@
+{
+	"binance": {
+        "apiKey": "",
+        "secret": "",
+        "enableRateLimit": true
+    	},
+	"okex": {
+        "apiKey": "",
+        "secret": "",
+        "password": "",
+        "enableRateLimit": true
+	},
+	"huobi": {
+		"apiKey": "",
+		"secret": "",
+		"enableRateLimit": true,
+		"options": {
+    		"createMarketBuyOrderRequiresPrice": false
+		}
+	}
+}
