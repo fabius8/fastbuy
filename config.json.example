@@ -10,6 +10,10 @@
         "password": "",
         "enableRateLimit": true
 	},
+	"mexc": {
+		"apiKey": "",
+        "secret": ""
+	},
 	"huobi": {
 		"apiKey": "",
 		"secret": "",
