@@ -52,7 +52,7 @@ if __name__ == '__main__':
     while True:
         timeB = datetime.strptime(opentime, "%Y-%m-%d %H:%M:%S")
         timeA = datetime.now()
-        if timeA - timedelta(microseconds=diff*1000) > timeB:
+        if timeA + timedelta(microseconds=diff*1000) > timeB:
             try:
                 res = exchangeTrade(coin, exchange, buy_price, buy_amount)
                 print("交易完成!", res)
