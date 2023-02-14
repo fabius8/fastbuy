@@ -64,4 +64,4 @@ if __name__ == '__main__':
             break
         else:
             print("距离", timeB, "剩余时间:", (timeB - timeA), end = '\r')
-        time.sleep(0.05)
+        time.sleep(0)
