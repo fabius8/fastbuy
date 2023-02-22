@@ -38,9 +38,9 @@ if __name__ == '__main__':
         if timeA > timeB:
             try:
                 res = exchangeTrade(coin, exchange, sell_price, sell_amount)
-                print("交易完成!", res)
+                print("发送成功!", res)
             except Exception as e:
-                print("抢购失败!", type(e).__name__, str(e))
+                print("交易失败!", type(e).__name__, str(e))
                 pass
             timeC = datetime.now()
             print("交易耗时", (timeC - timeA).microseconds/1000, "毫秒")
