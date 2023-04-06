@@ -15,7 +15,7 @@ config = json.load(open('config.json'))
 exchange = {}
 
 with open('addresses.txt', 'r') as f:
-    addresses = f.readlines()
+    addresses = [line.rstrip() for line in f]
 print(addresses)
 
 def exchangeInit(config):
