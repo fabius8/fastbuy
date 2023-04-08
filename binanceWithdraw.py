@@ -7,7 +7,7 @@ from datetime import datetime
 
 # 修改区
 coin = "MATIC"
-amount = 10
+amount = 0
 network = "MATIC"
 address = ""
 
@@ -29,8 +29,7 @@ def checkNetwork():
     for i in res:
         if i["coin"] == coin:
             for j in i["networkList"]:
-                if j["network"] == network:
-                    print(j)
+                print(j)
     for i in res:
         if i["coin"] == coin:
             for j in i["networkList"]:
