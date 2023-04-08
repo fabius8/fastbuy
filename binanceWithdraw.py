@@ -29,7 +29,7 @@ def checkNetwork():
     for i in res:
         if i["coin"] == coin:
             for j in i["networkList"]:
-                print("support network:", j["network"])
+                print(coin, "support network:", j["network"])
     for i in res:
         if i["coin"] == coin:
             for j in i["networkList"]:
