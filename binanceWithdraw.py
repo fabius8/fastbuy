@@ -11,6 +11,7 @@ amount = 10
 network = "MATIC"
 address = ""
 
+
 config = json.load(open('config.json'))
 exchange = {}
 
@@ -26,7 +27,7 @@ def exchangeInit(config):
 def checkNetwork():
     res = exchange["spot"].sapi_get_capital_config_getall()
     for i in res:
-        if i["coin"] == "MATIC":
+        if i["coin"] == coin:
             for j in i["networkList"]:
                 if j["network"] == network:
                     #print(j)
