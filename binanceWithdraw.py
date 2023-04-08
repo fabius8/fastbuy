@@ -9,8 +9,6 @@ from datetime import datetime
 coin = "USDC"
 amount = 0
 network = "ARB"
-address = ""
-
 
 config = json.load(open('config.json'))
 exchange = {}
@@ -48,6 +46,8 @@ if __name__ == '__main__':
     if(checkNetwork() == False):
         print("network wrong!")
         exit(1)
+    time.sleep(3)
     for addr in addresses:
         res = exchangeWithdraw(coin, exchange, amount, addr, network)
         print(res)
+        time.sleep(1)
