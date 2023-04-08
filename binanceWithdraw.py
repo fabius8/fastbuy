@@ -30,6 +30,11 @@ def checkNetwork():
         if i["coin"] == coin:
             for j in i["networkList"]:
                 if j["network"] == network:
+                    print(j)
+    for i in res:
+        if i["coin"] == coin:
+            for j in i["networkList"]:
+                if j["network"] == network:
                     #print(j)
                     return True
     return False
