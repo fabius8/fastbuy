@@ -6,9 +6,9 @@ import time
 from datetime import datetime
 
 # 修改区
-coin = "MATIC"
+coin = "USDC"
 amount = 0
-network = "MATIC"
+network = "ARB"
 address = ""
 
 
