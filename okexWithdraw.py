@@ -8,8 +8,8 @@ from datetime import datetime
 # 修改区
 coin = "USDT"
 amount = 11
-fee = 1
-network = "USDT-TRC20"
+fee = 0.1
+network = "USDT-Arbitrum one"
 
 config = json.load(open('config.json'))
 exchange = {}
