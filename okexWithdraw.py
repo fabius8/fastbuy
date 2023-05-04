@@ -26,7 +26,7 @@ def exchangeInit(config):
 
 
 def exchangeWithdraw(coin, exchange, amount, address, network, fee):
-    res = exchange["spot"].withdraw(coin, amount, address, {"chain": network, "fee": fee, "pwd": config["okex"]["pwd"]})
+    res = exchange["spot"].withdraw(coin, amount, address, {"chain": network, "fee": fee})
     return res
 
 
