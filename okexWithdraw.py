@@ -6,10 +6,10 @@ import time
 from datetime import datetime
 
 # 修改区
-coin = "MATIC"
-amount = 10
-fee = 0.48
-network = "MATIC-Polygon"
+coin = "USDT"
+amount = 11
+fee = 1
+network = "USDT-TRC20"
 
 config = json.load(open('config.json'))
 exchange = {}
