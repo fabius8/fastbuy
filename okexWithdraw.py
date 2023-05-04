@@ -11,7 +11,6 @@ amount = 10
 fee = 0.48
 network = "MATIC-Polygon"
 
-
 config = json.load(open('config.json'))
 exchange = {}
 
@@ -27,7 +26,7 @@ def exchangeInit(config):
 
 
 def exchangeWithdraw(coin, exchange, amount, address, network, fee):
-    res = exchange["spot"].withdraw(coin, amount, address, {"chain": network, "fee": fee})
+    res = exchange["spot"].withdraw(coin, amount, address, {"chain": network, "fee": fee, "pwd": config["okex"]["pwd"]})
     return res
 
 
